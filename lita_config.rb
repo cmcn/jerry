@@ -40,7 +40,7 @@ Lita.configure do |config|
 
   ## Example: Set options for the Redis connection.
   config.redis = {
-    host:  "viperfish.redistogo.com:11919/",
+    host:  "redis://redistogo:efe686f13108ea5a1995421c6aeeb27f@viperfish.redistogo.com:11919/",
     port: 11919
   }
 
