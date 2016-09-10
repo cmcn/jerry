@@ -2,13 +2,19 @@ Lita.configure do |config|
   # The name your robot will use.
   config.robot.name = "jerry"
   config.robot.mention_name = "jerry"
-  config.robot.adapter = :slack
-  config.redis[:url] = ENV["REDISTOGO_URL"]
-  config.http.port = ENV["PORT"]
-  config.adapters.shell.private_chat
+  config.robot.locale = :en
+  config.adapters.shell.private_chat = true
 
-  # The locale code for the language to use.
-  # config.robot.locale = :en
+  config.robot.adapter = :slack
+  config.adapters.slack.token = "xoxb-78370690743-EAsMLLU8gBCco1JaFHzy0D0E"
+
+  # config.redis[:url] = "brendanfest-jerry.herokuapp.com/"
+  # config.http.port = ENV["PORT"]
+
+
+
+
+
 
   # The severity of messages to log. Options are:
   # :debug, :info, :warn, :error, :fatal
@@ -22,15 +28,15 @@ Lita.configure do |config|
 
   # The adapter you want to connect with. Make sure you've added the
   # appropriate gem to the Gemfile.
-  config.robot.adapter = :shell
+  # config.robot.adapter = :shell
 
   ## Example: Set options for the chosen adapter.
   # config.adapter.username = "myname"
   # config.adapter.password = "secret"
 
   ## Example: Set options for the Redis connection.
-  # config.redis.host = "127.0.0.1"
-  # config.redis.port = 1234
+  config.redis.host = "127.0.0.1"
+  config.redis.port = 6379
 
   ## Example: Set configuration for any loaded handlers. See the handler's
   ## documentation for options.
