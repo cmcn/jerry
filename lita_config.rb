@@ -14,7 +14,6 @@ Lita.configure do |config|
   # config.adapters.slack.unfurl_media = false
 
   # config.redis[:url] = "brendanfest-jerry.herokuapp.com/"
-  # config.http.port = ENV["PORT"]
 
 
 
@@ -40,8 +39,8 @@ Lita.configure do |config|
   # config.adapter.password = "secret"
 
   ## Example: Set options for the Redis connection.
-  config.redis.host = "127.0.0.1"
-  config.redis.port = 6379
+  config.redis.host = "brendanfest-jerry.herokuapp.com/"
+  config.redis.port = 11919
 
   ## Example: Set configuration for any loaded handlers. See the handler's
   ## documentation for options.
