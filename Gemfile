@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "lita"
-gem "lita-slack"
+gem "lita-slack", git: 'https://github.com/litaio/lita-slack.git', branch: 'master'
 
 # Uncomment to use the HipChat adapter
 # gem "lita-hipchat"
