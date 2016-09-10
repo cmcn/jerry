@@ -3,10 +3,8 @@ Lita.configure do |config|
   config.robot.name = "jerry"
   config.robot.mention_name = "jerry"
   config.robot.locale = :en
-  config.adapters.shell.private_chat = true
 
   config.robot.adapter = :slack
-
   config.adapters.slack.token = "xoxb-78370690743-EAsMLLU8gBCco1JaFHzy0D0E"
   # config.adapters.slack.link_names = true
   # config.adapters.slack.parse = "full"
