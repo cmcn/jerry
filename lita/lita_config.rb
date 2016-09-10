@@ -2,6 +2,9 @@ Lita.configure do |config|
   # The name your robot will use.
   config.robot.name = "jerry"
   config.robot.mention_name = "jerry"
+  config.robot.adapter = :slack
+  config.redis[:url] = ENV["REDISTOGO_URL"]
+  config.http.port = ENV["PORT"]
 
   # The locale code for the language to use.
   # config.robot.locale = :en
