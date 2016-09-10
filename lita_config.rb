@@ -20,7 +20,7 @@ Lita.configure do |config|
     port: 11919,
     password: "efe686f13108ea5a1995421c6aeeb27f"
   }
-  # config.http.port = 11919
+  config.http.port = ENV["PORT"]
 
   # An array of user IDs that are considered administrators. These users
   # the ability to add and remove other users from authorization groups.
