@@ -6,7 +6,12 @@ Lita.configure do |config|
   config.adapters.shell.private_chat = true
 
   config.robot.adapter = :slack
+
   config.adapters.slack.token = "xoxb-78370690743-EAsMLLU8gBCco1JaFHzy0D0E"
+  # config.adapters.slack.link_names = true
+  # config.adapters.slack.parse = "full"
+  # config.adapters.slack.unfurl_links = false
+  # config.adapters.slack.unfurl_media = false
 
   # config.redis[:url] = "brendanfest-jerry.herokuapp.com/"
   # config.http.port = ENV["PORT"]
