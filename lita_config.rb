@@ -13,9 +13,6 @@ Lita.configure do |config|
   # config.adapters.slack.unfurl_links = false
   # config.adapters.slack.unfurl_media = false
 
-  # config.redis[:url] = "brendanfest-jerry.herokuapp.com/"
-
-
 
 
 
@@ -40,7 +37,7 @@ Lita.configure do |config|
 
   ## Example: Set options for the Redis connection.
   config.redis = {
-    host:  "redis://redistogo:efe686f13108ea5a1995421c6aeeb27f",
+    host:  "viperfish.redistogo.com",
     port: 11919
   }
 
