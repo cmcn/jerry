@@ -39,7 +39,7 @@ Lita.configure do |config|
   # config.adapter.password = "secret"
 
   ## Example: Set options for the Redis connection.
-  config.redis.host = "brendanfest-jerry.herokuapp.com/"
+  config.redis.host = "viperfish.redistogo.com:11919/"
   config.redis.port = 11919
 
   ## Example: Set configuration for any loaded handlers. See the handler's
