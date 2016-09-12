@@ -17,15 +17,15 @@ post '/gateway' do
 
   case command
   when "!dog"
-    return get_dog
+    get_dog
   when "!pick"
-    return pick_option
+    pick_option
   when "!roulette"
-    return play_roulette
+    play_roulette
   when "!help"
     respond_with(HELP_TEXT)
   else
-    return respond_with("fuck u m8")
+    respond_with("fuck u m8")
   end
 end
 
@@ -40,8 +40,8 @@ def format_message(message)
 end
 
 def get_dog
-  resp = HTTParty.get("https://webtask.it.auth0.com/api/run/wt-cpmpal-gmail_com-0/test?webtask_no_cache=1")
-  respond_with(resp["text"])
+  resp = HTTParty.get("http://reddit.com/r/dogpictures.json?limit=100&type=link", headers: { "User-Agent" => 'brendanfest-jerry' })
+  respond_with("<#{resp["data"]["children"][rand(100)]["data"]["preview"]["images"].first["source"]["url"]}>")
 end
 
 def pick_option
