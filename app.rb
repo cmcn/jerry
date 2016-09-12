@@ -7,8 +7,7 @@ HELP_TEXT = "
   ```
   !dog  - retrieves a picture of a cute ass pupper
   !pick - Jerry will decide your fate from a list of comma-separated options
-      usage - !pick live,die
-  ```
+      usage - !pick live,die```
 "
 
 post '/gateway' do
