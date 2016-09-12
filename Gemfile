@@ -3,6 +3,8 @@ source "https://rubygems.org"
 gem "lita"
 gem "lita-slack"
 
+gem "sinatra"
+
 # Uncomment to use the HipChat adapter
 # gem "lita-hipchat"
 
