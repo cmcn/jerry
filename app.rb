@@ -35,14 +35,18 @@ def respond_with(message)
   { text: message }.to_json
 end
 
+def format_message(message)
+  message.strip
+end
+
 def get_dog
   resp = HTTParty.get("https://webtask.it.auth0.com/api/run/wt-cpmpal-gmail_com-0/test?webtask_no_cache=1")
   respond_with(resp["text"])
 end
 
 def pick_option
-  options = params[:text].split[1].split(",")
-  respond_with(options[rand(options.length)])
+  options = params[:text][5..-1].split(',')
+  respond_with(format_message(options[rand(options.length)]))
 end
 
 def play_roulette
