@@ -5,6 +5,7 @@ gem "lita-slack"
 
 gem "rack", "<2.0"
 gem "sinatra"
+gem "httparty"
 
 # Uncomment to use the HipChat adapter
 # gem "lita-hipchat"
