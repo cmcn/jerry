@@ -19,6 +19,8 @@ post '/gateway' do
     return get_dog
   when "!pick"
     return pick_option
+  when "!roulette"
+    return play_roulette
   when "!help"
     respond_with(HELP_TEXT)
   else
@@ -40,4 +42,12 @@ end
 def pick_option
   options = params[:text].split[1].split(",")
   respond_with(options[rand(options.length)])
+end
+
+def play_roulette
+  if rand(6) == 0
+    respond_with("Bang! you're dead :boom: :gun:")
+  else
+    respond_with("You live.... for now.")
+  end
 end
