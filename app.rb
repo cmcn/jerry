@@ -4,15 +4,31 @@ require 'httparty'
 require 'json'
 
 post '/gateway' do
-  if params[:text][0..3] == "!dog"
-    resp = HTTParty.get("https://webtask.it.auth0.com/api/run/wt-cpmpal-gmail_com-0/test?webtask_no_cache=1")
+  text = params[:text]
+  command = text.split.first
+
+  case command
+  when "!dog"
     return get_dog
+  when "!pick"
+    return pick_option
   else
-    return { text: "fuck u m8" }.to_json
+    return respond_with("fuck u m8")
   end
+end
+
+private
+
+def respond_with(message)
+  { text: message }.to_json
 end
 
 def get_dog
   resp = HTTParty.get("https://webtask.it.auth0.com/api/run/wt-cpmpal-gmail_com-0/test?webtask_no_cache=1")
-  return { text: resp["text"] }.to_json
+  respond_with(resp["text"])
+end
+
+def pick_option
+  options = params[:text].split[1].split(",")
+  respond_with(options[rand(options.length)])
 end
