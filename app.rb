@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'sinatra'
 
-get '/gateway' do
-  'yes this is a gateway'
+post '/gateway' do
+  "fuck u m8"
 end
