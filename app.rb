@@ -3,6 +3,14 @@ require 'sinatra'
 require 'httparty'
 require 'json'
 
+HELP_TEXT = "
+  ```
+  !dog  - retrieves a picture of a cute ass pupper
+  !pick - Jerry will decide your fate from a list of comma-separated options
+      usage - !pick live,die
+  ```
+"
+
 post '/gateway' do
   text = params[:text]
   command = text.split.first
@@ -12,6 +20,8 @@ post '/gateway' do
     return get_dog
   when "!pick"
     return pick_option
+  when "!help"
+    respond_with(HELP_TEXT)
   else
     return respond_with("fuck u m8")
   end
