@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
+require 'json'
 
 post '/gateway' do
-  "fuck u m8"
+  { text: "fuck u m8" }.to_json
 end
