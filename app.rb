@@ -4,10 +4,10 @@ require 'httparty'
 require 'json'
 
 HELP_TEXT = "
-  ```
-  !dog  - retrieves a picture of a cute ass pupper
-  !pick - Jerry will decide your fate from a list of comma-separated options
-      usage - !pick live,die```
+```
+!dog  # retrieves a picture of a cute ass pupper
+!pick # Jerry will decide your fate from a list of comma-separated options
+          !pick live,die```
 "
 
 post '/gateway' do
